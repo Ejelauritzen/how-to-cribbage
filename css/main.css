@@ -1,0 +1,133 @@
+/* I added a media query to change the number of columns to 1.*/
+
+body {
+	background-color: lightblue;
+	text-align: justify;
+	font-family: monospace;
+	font-size: 20px;
+
+}
+
+.content {
+	grid-column-start: 1;
+	grid-column-end: 3;
+
+
+}
+
+.content p {
+	text-align: justify;
+}
+
+.headers {
+	background-color: azure;
+	font-size: 25px;
+	position: relative;
+	top: 20px;
+	left: 10px;
+	display: grid;
+	align-items: center;
+	grid-template-columns: min-content max-content 1fr;
+}
+
+.override {
+	height: min-content;
+	width: max-content;
+	margin-left: auto;
+	margin-right: 24px;
+}
+
+.headers img {
+	float: left;
+	width: 80px;
+	height: 70px;
+	padding-bottom: 20px;
+
+}
+
+.menu {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	border: black solid;
+	align-self: auto;
+	height: min-content;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+}
+
+.menu label {
+	background-color: azure;
+	font-size: 25px;
+
+}
+
+.menu a:hover {
+	color: red;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 920px) {
+	div.grid-container {
+		grid-template-columns: min-content;
+		justify-content: center;
+	}
+
+	div.content {
+		grid-template-columns: min-content;
+		justify-content: center;
+	}
+}
+
+.grid-container {
+	display: grid;
+	gap: 0 70px;
+	grid-template-columns: 30% 70%;
+}
+
+figure img {
+	max-width: 500px;
+	max-height: 500px;
+	min-width: 300px;
+	min-height: 300px;
+	box-shadow: 10px 10px 5px darkgrey;
+
+}
+
+figure {
+	width: min-content;
+}
+
+.foot p {
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+.borderImg {
+	border-top: 70px solid transparent;
+	border-image-width: 40px;
+	border-image-source: url("../img/cardSuits.png");
+}
+
+.imageBorder {
+	background-position: left;
+	background-image: url(../img/cardSuits.png);
+	background-position-x: left;
+	background-repeat: repeat-x;
+	height: 30px;
+	width: 100%;
+	background-size: contain;
+}
+
+.video {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+section {
+	display: none;
+}
+
+section.active {
+	display: block;
+}
